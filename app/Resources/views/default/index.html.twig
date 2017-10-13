@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    {% include('default/stylesheets.html.twig') %}
+{% endblock %}
+
 {% block body %}
     <div id="wrapper">
         <div id="container">
@@ -12,4 +16,4 @@
     </div>
 {% endblock %}
 
-{% include('default/stylesheets.html.twig') %}
+
