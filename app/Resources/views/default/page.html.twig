@@ -1,12 +1,17 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    {% include('default/stylesheets.html.twig') %}
+{% endblock %}
+
 {% block body %}
     <div id="wrapper">
         <div id="container">
             {{ page.text }}
+            <div id="comments">
+                {% include 'FOSCommentBundle:Thread:async.html.twig' with {'id': page.id} %}
+            </div>
         </div>
     </div>
-
-    {% include('default/stylesheets.html.twig') %}
 {% endblock %}
 
